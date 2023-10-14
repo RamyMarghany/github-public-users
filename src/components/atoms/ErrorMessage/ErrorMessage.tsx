@@ -1,15 +1,15 @@
 // Modules
-import React from "react";
+import { ReactNode } from "react";
 
 // Styles
-import './ErrorMessage.scss'
+import * as Styled from "./ErrorMessage.styled";
 
-// Definition
-type ErrorMessageProps={
-    children: React.ReactNode
-}
-export const ErrorMessage :React.FC<ErrorMessageProps>=({children})=>(
-    <div className="error-message">
-        <h3>{children}</h3>
-    </div>
-)
+// Components
+export const ErrorMessage = ({ children }: { children: ReactNode }) => {
+  return (
+    <Styled.ErrorMessage className="error-message">
+      <h1>Something went wrong!</h1>
+      <h3>{children}</h3>
+    </Styled.ErrorMessage>
+  );
+};
