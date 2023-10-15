@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const App = styled.div`
   background: ${({ theme }) => theme.colors.lightBlue};
   padding-top: 5rem;
-  min-height: 100%;
+  min-height: calc(100% - 5rem);
 `;
 
 export const ContentWrapper = styled.section`

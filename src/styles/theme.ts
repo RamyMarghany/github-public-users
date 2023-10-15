@@ -13,6 +13,7 @@ export const theme = {
     medium: "10px",
     default: "20px",
     large: "40px",
+    xlarge: "60px",
   },
   typography: {
     xxsmall: "10px",

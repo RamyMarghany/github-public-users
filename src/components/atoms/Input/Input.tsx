@@ -1,4 +1,7 @@
+// Styles
+import * as Styled from "./Input.styled";
 
+// Definition
 type InputProps = {
     type?: "text" | "email" | "password" | "date" | "tel";
     value: string;
@@ -9,5 +12,5 @@ type InputProps = {
 };
 
 export const Input = ({ value, className, handleChange, type = "text", placeholder, onKeyPress }: InputProps) => {
-    return <input type={type} className={`custome-input ${className = ""}`} value={value} onChange={handleChange} placeholder={placeholder} onKeyPress={onKeyPress} />;
+    return <Styled.Input type={type} className={`custome-input ${className = ""}`} value={value} onChange={handleChange} placeholder={placeholder} onKeyPress={onKeyPress} />;
 };

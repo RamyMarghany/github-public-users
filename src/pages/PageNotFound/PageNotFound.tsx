@@ -1,14 +1,14 @@
-// Modules
-import { Link } from "react-router-dom";
-
 // Images
 import MyImage from "assets/images/pageNotFound.png";
 
+// Styles
+import * as Styled from "./PageNotFound.styled";
+
 export const PageNotFound = () => {
     return (
-        <div className="wrapper">
-            <img src={MyImage} alt="page not found" />
-            <Link className="wrapper__btn" to="/">go home</Link>
-        </div>
+        <Styled.Wrapper className="wrapper">
+            <Styled.NotFoundImg src={MyImage} alt="page not found" />
+            <Styled.BackButton to="/">back to homepage </Styled.BackButton>
+        </Styled.Wrapper>
     );
 };

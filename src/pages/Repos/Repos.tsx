@@ -3,11 +3,14 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-interface Repository {
-    id: number;
-    name: string;
-    html_url: string;
-}
+// Component
+import { RepoList } from "components/molecules/ReposList/ReposList";
+
+// Types
+import { Repository } from "types/types";
+
+// Styles
+import * as Styled from "./Repos.styled";
 
 export const Repos: React.FC = () => {
     const { username } = useParams<{ username: string }>();
@@ -21,19 +24,17 @@ export const Repos: React.FC = () => {
                 console.error(error);
             }
         };
-
         fetchRepositories();
     }, [username]);
     return (
         <div>
-            <h2>Repositories for {username}</h2>
-            <ul>
-                {repositories.map((repo) => (
-                    <li key={repo.id}>
-                        <a href={repo.html_url}>{repo.name}</a>
-                    </li>
-                ))}
-            </ul>
+            <Styled.Headline>Repositories for {username}</Styled.Headline>
+            {repositories.length > 0 ?
+                (<RepoList RepositoryArray={repositories} />)
+                :
+                (<Styled.NoRepo>there are no repos for {username}</Styled.NoRepo>)
+            }
+            <Styled.BackButton to="/"> Back to home page</Styled.BackButton>
         </div>
     )
 }
