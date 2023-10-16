@@ -1,3 +1,6 @@
+// Modules
+import React from "react";
+
 // Styles
 import * as Styled from "./Input.styled";
 

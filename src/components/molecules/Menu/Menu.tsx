@@ -1,4 +1,7 @@
 // Modules
+import React from "react";
+
+// Modules
 import { Link } from "react-router-dom";
 
 // Components

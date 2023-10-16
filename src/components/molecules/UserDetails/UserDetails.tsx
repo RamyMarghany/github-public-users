@@ -1,3 +1,6 @@
+// Modules
+import React from "react";
+
 // Components
 import {UserDetailsCard} from "components/atoms/UserDetailsCard/UserDetailsCard"
 

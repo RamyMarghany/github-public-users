@@ -1,5 +1,5 @@
 // Modules
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 // Context
 import { ThemeContext } from "context/ThemeContext";

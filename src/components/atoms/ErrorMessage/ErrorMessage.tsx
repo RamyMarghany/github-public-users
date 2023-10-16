@@ -1,5 +1,5 @@
 // Modules
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 // Styles
 import * as Styled from "./ErrorMessage.styled";

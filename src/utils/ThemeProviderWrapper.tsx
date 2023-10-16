@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "styles/theme";
 

@@ -1,3 +1,6 @@
+// Module
+import React from "react";
+
 // Styles
 import * as Styled from "./Loading.styled";
 
